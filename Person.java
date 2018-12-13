@@ -1,12 +1,16 @@
+
 import java.util.ArrayList;
 
 public abstract class Person {
-	private ArrayList<Card> oneRoundCard;
+	private ArrayList<Card> oneRoundCard = new ArrayList<> ();
 	public void setOneRoundCard(ArrayList<Card> cards){
 		oneRoundCard=cards;
 	}
 	public ArrayList<Card> getOneRoundCard(){
 		return oneRoundCard;
+	}
+	public void setOneRoundCard(Card addcard){
+		oneRoundCard.add(addcard);
 	}
 	public abstract boolean hit_me(Table table);
 	public int getTotalValue() {
